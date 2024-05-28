@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-/*public class DownloadPageTest extends Setup {
+public class DownloadPageTest extends Setup {
     private DownloadsPage downloadsPage;
     private Homepage homepage;
     @BeforeClass
@@ -23,6 +23,3 @@ import org.testng.annotations.Test;
         //Assert.assertTrue(downloadsPage.verifyFileExists());
     }
 }
-
-
- */
