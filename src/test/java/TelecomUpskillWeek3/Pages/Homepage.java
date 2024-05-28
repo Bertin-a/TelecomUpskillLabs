@@ -1,28 +1,22 @@
 package TelecomUpskillWeek3.Pages;
 
 import TelecomUpskillWeek3.Setup;
-import TelecomUpskillWeek3.TestCases.HomePageTest;
 import TelecomUpskillWeek3.Utility.Scroll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.WheelInput;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+import  TelecomUpskillWeek3.Utility.*;
 
-import java.util.Calendar;
 
 public class Homepage extends Setup {
     @FindBy(xpath = "//strong[contains(text(),'Welcome to your software automation practice websi')]")
     public WebElement header;
     @FindBy(xpath = "(//a[normalize-space()='Form Fields'])[1]")
     private WebElement formsField;
-    @FindBy(xpath = "//a[normalize-space()='Calendars']")
+    @FindBy(linkText = "Calendars")
     private WebElement calenders;
     @FindBy(xpath = "//a[normalize-space()='Popups']" )
     private WebElement popups;
@@ -42,8 +36,6 @@ public class Homepage extends Setup {
     private WebElement sliders;
 
         private WebDriver driver;
-
-        // Constructor to initialize WebDriver and WebElements
         public Homepage(WebDriver driver) {
             this.driver = driver;
             PageFactory.initElements(driver, this);
@@ -62,9 +54,9 @@ public class Homepage extends Setup {
 
     }
 
-    public CalendarPage Calender() throws InterruptedException {
+    public CalendarPage Calender(){
             Scroll.ScrollIntoView(calenders);
-            Thread.sleep(3000);
+            wait.waitForElement(calenders);
             calenders.click();
             return new CalendarPage(driver);
 
@@ -77,23 +69,23 @@ public class Homepage extends Setup {
 
     }
 
-    public TablesPage Tables() throws InterruptedException {
+    public TablesPage Tables(){
             Scroll.ScrollIntoView(tables);
-            Thread.sleep(3000);
+            wait.waitForElement(tables);
             tables.click();
             return new TablesPage(driver);
 
     }
 
-    public WindowsOperationsPage WindowsOperations() throws InterruptedException {
+    public WindowsOperationsPage WindowsOperations()  {
         Scroll.ScrollIntoView(windowsOperators);
-        Thread.sleep(3000);
+        wait.waitForElement(windowsOperators);
             windowsOperators.click();
             return new WindowsOperationsPage(driver);
 
     }
 
-    public FileUploadsPage FileUploads() throws InterruptedException {
+    public FileUploadsPage FileUploads(){
         WheelInput.ScrollOrigin scrollOrigin = WheelInput.ScrollOrigin.fromElement(popups);
         new Actions(driver)
                 .scrollFromOrigin(scrollOrigin, 0, 800)
@@ -102,24 +94,23 @@ public class Homepage extends Setup {
         return new FileUploadsPage(driver);
 
     }
-   public DownloadsPage Downloads() throws InterruptedException {
+   public DownloadsPage Downloads(){
         Scroll.ScrollIntoView(fileDownloads);
-        Thread.sleep(3000);
+        wait.waitForElement(fileDownloads);
         fileDownloads.click();
         return new DownloadsPage(driver);
     }
-    public IframesPage Iframes() throws InterruptedException {
+    public IframesPage Iframes(){
         Scroll.ScrollIntoView(iframes);
-        Thread.sleep(3000);
-            iframes.click();
-            return new IframesPage(driver);
+        wait.waitForElement(iframes);
+        iframes.click();
+        return new IframesPage(driver);
 
     }
-    public SliderPage Slider() throws InterruptedException {
+    public SliderPage Slider() {
         Scroll.ScrollIntoView(sliders);
-        Thread.sleep(3000);
+        wait.waitForElement(sliders);
         sliders.click();
         return new SliderPage(driver);
-
     }
 }

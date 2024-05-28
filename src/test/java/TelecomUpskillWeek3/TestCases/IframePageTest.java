@@ -6,7 +6,7 @@ import TelecomUpskillWeek3.Pages.SliderPage;
 import TelecomUpskillWeek3.Setup;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-/*
+
 public class IframePageTest extends Setup {
     private IframesPage iframesPage;
     private Homepage homepage;
@@ -24,5 +24,5 @@ public class IframePageTest extends Setup {
 
 }
 
- */
+
 

@@ -1,6 +1,8 @@
 package TelecomUpskillWeek3.Pages;
 
 import TelecomUpskillWeek3.Setup;
+import TelecomUpskillWeek3.Utility.Scroll;
+import TelecomUpskillWeek3.Utility.wait;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,10 +27,8 @@ public class IframesPage extends Setup {
     public void scrollInIframeAndClickMonAnchor() throws InterruptedException {
         driver.switchTo().frame(iframe);
         //driver.switchTo().alert().accept();
-        FormPage formPage;
-        formPage = new FormPage(driver);
-       // formPage.scrollIntoView(anchorToFrame2);
-        Thread.sleep(3000);
+        Scroll.ScrollIntoView(anchorToFrame2);
+        wait.waitForElement(anchorToFrame2);
         anchorToFrame2.click();
     }
 }

@@ -2,6 +2,7 @@ package TelecomUpskillWeek3.Pages;
 
 import TelecomUpskillWeek3.Setup;
 import TelecomUpskillWeek3.Utility.Scroll;
+import TelecomUpskillWeek3.Utility.wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,8 +42,7 @@ public class FormPage extends Setup {
     }
     public void pickColor() throws InterruptedException {
         Scroll.ScrollIntoView(radioButtons.get(0));
-        //scrollIntoView(radioButtons.get(0));
-        Thread.sleep(3000);
+        wait.waitForElement(radioButtons.get(0));
         radioButtons.get(randomNumberGenerator.random(5)).click();
     }
 

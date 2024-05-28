@@ -6,7 +6,7 @@ import TelecomUpskillWeek3.Setup;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-/*public class CalenderPageTest extends Setup {
+public class CalenderPageTest extends Setup {
     private CalendarPage calendarPage;
     private Homepage homepage;
 
@@ -23,4 +23,3 @@ import org.testng.annotations.Test;
 }
 
 
- */
