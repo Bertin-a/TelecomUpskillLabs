@@ -1,11 +1,5 @@
-package TelecomUpskillWeek3.TestCases;
+package Selenide.TestCases;
 
-import TelecomUpskillWeek3.Pages.Homepage;
-import TelecomUpskillWeek3.Pages.TablesPage;
-import TelecomUpskillWeek3.Pages.WindowsOperationsPage;
-import TelecomUpskillWeek3.Setup;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 /*
 public class TablesPageTest extends bambai {
     private TablesPage tablesPage;

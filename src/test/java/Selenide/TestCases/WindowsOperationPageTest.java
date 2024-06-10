@@ -1,19 +1,5 @@
-package TelecomUpskillWeek3.TestCases;
+package Selenide.TestCases;
 
-import TelecomUpskillWeek3.Pages.Homepage;
-import TelecomUpskillWeek3.Pages.PopupPage;
-import TelecomUpskillWeek3.Pages.WindowsOperationsPage;
-import TelecomUpskillWeek3.Setup;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Set;
 /*
 public class WindowsOperationPageTest extends bambai {
     private WindowsOperationsPage windowsOperationPage;

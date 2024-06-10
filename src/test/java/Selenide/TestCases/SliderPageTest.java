@@ -1,11 +1,5 @@
-package TelecomUpskillWeek3.TestCases;
+package Selenide.TestCases;
 
-import TelecomUpskillWeek3.Pages.Homepage;
-import TelecomUpskillWeek3.Pages.PopupPage;
-import TelecomUpskillWeek3.Pages.SliderPage;
-import TelecomUpskillWeek3.Setup;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 /*
 public class SliderPageTest extends bambai {
     private SliderPage sliderPage;

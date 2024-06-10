@@ -1,4 +1,4 @@
-package TelecomUpskillWeek3.TestCases;
+package Selenide.TestCases;
 
 import TelecomUpskillWeek3.Pages.Homepage;
 import TelecomUpskillWeek3.Setup;
