@@ -6,6 +6,9 @@ import Selenide.Pages.Homepage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Selenide.switchTo;
+import static org.testng.Assert.assertEquals;
+
 public class FormPageTest {
    Homepage homepage = new Homepage();
    FormPage formPage = new FormPage();
@@ -21,7 +24,9 @@ public class FormPageTest {
         formPage.Dropdown().selectOption(0);
         formPage.EmailField().val("bertina@gmail.com");
         formPage.MessageField().val("this is a message to myself");
-        //formPage.SubmitBtn().click();
+        formPage.SubmitBtn().click();
+        assertEquals(formPage.alertBox(), "Message received!", "Message does not match"  );
+        switchTo().alert().accept();
 
 
     }

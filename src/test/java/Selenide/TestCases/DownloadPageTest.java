@@ -10,6 +10,7 @@ public class DownloadPageTest{
     Homepage homepage = new Homepage();
     @BeforeClass
     public void setUpPage() {
+        homepage.open().fileDownload().click();
 
     }
 

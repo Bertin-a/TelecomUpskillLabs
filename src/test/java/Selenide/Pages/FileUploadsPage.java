@@ -1,36 +1,24 @@
 package Selenide.Pages;
 
-import TelecomUpskillWeek3.Setup;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+
+
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 
 import java.nio.file.Paths;
 
-public class FileUploadsPage extends Setup {
-    @FindBy(id = "file-upload")
-    WebElement fileUploadBtn;
-    @FindBy(id = "upload-btn")
-    WebElement uploadBtn;
-    @FindBy(xpath = "//div[@class='wpcf7-response-output']")
-    WebElement thankYouMessage;
-    String filepath = Paths.get(getUsersDir() +"\\downloads\\test.pdf").toAbsolutePath().toString();
+import static com.codeborne.selenide.Selenide.$;
 
-    private WebDriver driver;
-    public FileUploadsPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-
+public class FileUploadsPage {
+    public SelenideElement FileUploadBtn(){
+        return $(By.id("file-upload"));
     }
-    public void upload() throws InterruptedException {
-        fileUploadBtn.sendKeys(filepath);
-        Thread.sleep(3000);
-        uploadBtn.click();
-
+    public SelenideElement uploadBtn(){
+        return $(By.id("upload-btn"));
+    }
+    public SelenideElement thankYouMessage(){
+        return $(By.xpath("//div[@class='wpcf7-response-output']"));
     }
 
-    private String getUsersDir(){
-       return System.getProperty("user.dir");
-    }
+
 }

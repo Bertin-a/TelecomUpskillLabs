@@ -1,23 +1,28 @@
 package Selenide.TestCases;
 
-import TelecomUpskillWeek3.Pages.Homepage;
-import TelecomUpskillWeek3.Pages.IframesPage;
-import TelecomUpskillWeek3.Setup;
+
+import Selenide.Pages.Homepage;
+import Selenide.Pages.IframesPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class IframePageTest extends Setup {
-    private IframesPage iframesPage;
-    private Homepage homepage;
+import static com.codeborne.selenide.Selenide.switchTo;
+import static org.testng.Assert.assertEquals;
+
+public class IframePageTest  {
+    IframesPage iframesPage = new IframesPage();
+    Homepage homepage = new Homepage();
     @BeforeClass
     public void setUpPage() throws InterruptedException {
-        iframesPage = new IframesPage(driver);
-        homepage = new Homepage(driver);
-        homepage.Iframes();
+       homepage.open().iframes().click();
     }
     @Test
-    public void scrollInIframeAndClick() throws InterruptedException {
-        iframesPage.scrollInIframeAndClickMonAnchor();
+    public void scrollInIframeAndClick(){
+        switchTo().frame(iframesPage.anchorToFrame2());
+        assertEquals(iframesPage.DocPageText().getText(), "Selenium automates browsers. That's it!", "Text does not match");
+
+
+
     }
 
 

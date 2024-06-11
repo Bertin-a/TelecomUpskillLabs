@@ -4,8 +4,7 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class FormPage {
@@ -33,6 +32,10 @@ public class FormPage {
    }
    public SelenideElement SubmitBtn(){
         return $(By.id("submit-btn"));
+   }
+
+   public String alertBox(){
+        return switchTo().alert().getText();
    }
 
 

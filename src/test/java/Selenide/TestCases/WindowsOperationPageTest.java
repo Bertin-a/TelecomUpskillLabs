@@ -1,69 +1,65 @@
 package Selenide.TestCases;
 
-/*
-public class WindowsOperationPageTest extends bambai {
-    private WindowsOperationsPage windowsOperationPage;
-    private Homepage homepage;
+
+import Selenide.Pages.Homepage;
+import Selenide.Pages.WindowsOperationsPage;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import java.util.Set;
+
+public class WindowsOperationPageTest{
+    Homepage homepage = new Homepage();
+    WindowsOperationsPage windowsOperationsPage = new WindowsOperationsPage();
+
     @BeforeClass
-    public void setUpPage() throws InterruptedException {
-        windowsOperationPage = new WindowsOperationsPage(driver);
-        homepage = new Homepage(driver);
+    public void setUp(){
+        homepage.open().windowsOperation().click();
+    }
+    @Test
+    public void operations(){
+        windowsOperationsPage.NewWindows().click();
+        String currentWindowHandle = WebDriverRunner.getWebDriver().getWindowHandle();
 
-        homepage.WindowsOperations();
-    }
-    @Test
-    public void newTab() throws InterruptedException {
-        windowsOperationPage.newTab();
-        ((JavascriptExecutor) driver).executeScript("window.open();");
-        Set<String> windowHandles = driver.getWindowHandles();
-        ArrayList<String> tabs = new ArrayList<>(windowHandles);
-        driver.switchTo().window(tabs.get(1));
-        Thread.sleep(10000);
-        driver.get("https://automatenow.io/");
-        String url = driver.getCurrentUrl();
-        Assert.assertEquals("https://automatenow.io/",url);
-        //System.out.println(windowsOperationPage.originalTab());
-        driver.switchTo().window(tabs.get(0));
-        //driver.switchTo().window(windowsOperationPage.originalTab());
-        Thread.sleep(5000);
-        String OriginalUrl = driver.getCurrentUrl();
-        Assert.assertEquals("https://practice-automation.com/window-operations/", OriginalUrl);
+        Set<String> allWindowsHandle = WebDriverRunner.getWebDriver().getWindowHandles();
 
-    }
-    @Test
-    public void replaceTab(){
-        windowsOperationPage.replaceWindow();
-        ((JavascriptExecutor) driver).executeScript("window.location.href='https://automatenow.io/'");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.urlToBe("https://automatenow.io/"));
-        String url = driver.getCurrentUrl();
-        Assert.assertEquals("https://automatenow.io/", url);
-        driver.navigate().back();
-        wait.until(ExpectedConditions.urlToBe("https://practice-automation.com/window-operations/"));
-        Assert.assertEquals(driver.getCurrentUrl(), "https://practice-automation.com/window-operations/");
-    }
-    @Test
-    public void NewWindow() throws InterruptedException {
-       String originalTab = driver.getWindowHandle();
-       Thread.sleep(2000);
-        windowsOperationPage.newWindow();
-        Thread.sleep(10000);
-        for(String windowHandle : driver.getWindowHandles()){
-           if(!windowHandle.equals(originalTab)){
-               driver.switchTo().window(windowHandle);
-               String url = driver.getCurrentUrl();
-               Assert.assertEquals("https://automatenow.io/", url);
-               driver.manage().window().maximize();
-               driver.close();
+        for(String window : allWindowsHandle){
+            if(window != currentWindowHandle){
+                WebDriverRunner.getWebDriver().switchTo().window(window);
+               // Selenide.closeWindow();
+                WebDriverRunner.getWebDriver().switchTo().window(currentWindowHandle);
+                break;
             }
-
-
         }
-        driver.switchTo().window(originalTab);
+        windowsOperationsPage.NewTab().click();
+        String mainTab = WebDriverRunner.getWebDriver().getWindowHandle();
 
+        Set<String> tabHandles = WebDriverRunner.getWebDriver().getWindowHandles();
+
+        for(String tabs : tabHandles){
+            if(tabs != mainTab){
+                WebDriverRunner.getWebDriver().switchTo().window(tabs);
+                WebDriverRunner.getWebDriver().switchTo().window(mainTab);
+                break;
+            }
+        }
+        windowsOperationsPage.ReplaceWindows().click();
+
+        String mainReplaceTab = WebDriverRunner.getWebDriver().getWindowHandle();
+
+        Set<String> ReplacedTabHandles = WebDriverRunner.getWebDriver().getWindowHandles();
+
+        for(String tabs : ReplacedTabHandles){
+            if(tabs != mainReplaceTab){
+                WebDriverRunner.getWebDriver().switchTo().window(tabs);
+                WebDriverRunner.getWebDriver().switchTo().window(mainReplaceTab);
+                break;
+            }
+        }
 
     }
-
-}
-
- */
+    }

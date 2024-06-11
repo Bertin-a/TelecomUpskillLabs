@@ -16,23 +16,5 @@ public class TablesPage {
         return $("figure[class='wp-block-table'] table");
     }
 
-   /* public void retrieveDataOnTable() {
-        List<WebElement> rows = table.findElements(By.tagName("tr"));
 
-        for (WebElement row : rows) {
-            List<WebElement> columns = row.findElements(By.tagName("td"));
-
-            for (WebElement column : columns) {
-                System.out.print(column.getText() + "\t");
-            }
-
-            System.out.println();
-
-
-        }
-
-
-    }
-
-    */
 }

@@ -15,7 +15,7 @@ public class SliderPage extends Setup {
     }
 
 
-    public void slide() throws InterruptedException {
+  //  public void slide() throws InterruptedException {
        // int sliderWidth = slider.getSize().width;
         //int offset = (int) (((double)(50 - 0) / (100 - 0)) * sliderWidth);
         //((50-0)/(100-0))
@@ -27,6 +27,6 @@ public class SliderPage extends Setup {
        // Thread.sleep(3000);
         //((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", slider, 50);
 
-    }
+    //}
 
 }

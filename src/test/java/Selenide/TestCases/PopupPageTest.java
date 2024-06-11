@@ -1,26 +1,30 @@
 package Selenide.TestCases;
 
-import TelecomUpskillWeek3.Pages.Homepage;
-import TelecomUpskillWeek3.Pages.PopupPage;
-import TelecomUpskillWeek3.Setup;
+
+import Selenide.Pages.Homepage;
+import Selenide.Pages.PopupPage;
+import com.codeborne.selenide.Selenide;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class PopupPageTest extends Setup {
-    private PopupPage popupPage;
-    private Homepage homepage;
+public class PopupPageTest {
+
+    Homepage homepage = new Homepage();
+    PopupPage popupPage = new PopupPage();
+
     @BeforeClass
-    public void setUpPage() {
-        popupPage = new PopupPage(driver);
-        homepage = new Homepage(driver);
-        homepage.PopUps();
+    public void setup(){
+        homepage.open().popUps().click();
     }
+
     @Test
     public void interactWithPopUps() throws InterruptedException {
-        popupPage.promptPopup();
-        Thread.sleep(3000);
-        popupPage.confirmPopup();
-        Thread.sleep(3000);
-        popupPage.clickOnAlert();
+        popupPage.PromptPopup().click();
+        Selenide.confirm();
+        popupPage.ConfirmPopup().click();
+        Selenide.confirm();
+        popupPage.AlertPopUp().click();
+        Selenide.confirm();
+       // popupPage.confirmResults().click();
     }
     }

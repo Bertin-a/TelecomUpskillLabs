@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class TablesPage extends Setup {
+
+
     @FindBy(css = "figure[class='wp-block-table'] table")
     private WebElement table;
     public TablesPage(WebDriver driver) {
