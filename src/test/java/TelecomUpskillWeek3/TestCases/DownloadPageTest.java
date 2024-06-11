@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class DownloadPageTest extends Setup {
-    private DownloadsPage downloadsPage;
+  /*  private DownloadsPage downloadsPage;
     private Homepage homepage;
     @BeforeClass
     public void setUpPage() throws InterruptedException {
@@ -22,4 +22,6 @@ public class DownloadPageTest extends Setup {
         downloadsPage.clickDownload();
         //Assert.assertTrue(downloadsPage.verifyFileExists());
     }
+    *
+   */
 }

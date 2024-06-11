@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class CalenderPageTest extends Setup {
-
+/*
     private CalendarPage calendarPage;
     private Homepage homepage;
     private String date = "2000-11-07";
@@ -29,6 +29,8 @@ public class CalenderPageTest extends Setup {
         softAssert.assertEquals(date, calendarPage.displayedDate(), "Wrong date is being displayed");
 
     }
+
+ */
 }
 
 

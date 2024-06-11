@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class IframePageTest extends Setup {
-    private IframesPage iframesPage;
+    /*private IframesPage iframesPage;
     private Homepage homepage;
     @BeforeClass
     public void setUpPage() throws InterruptedException {
@@ -20,6 +20,8 @@ public class IframePageTest extends Setup {
     public void scrollInIframeAndClick() throws InterruptedException {
         iframesPage.scrollInIframeAndClickMonAnchor();
     }
+
+     */
 
 
 }

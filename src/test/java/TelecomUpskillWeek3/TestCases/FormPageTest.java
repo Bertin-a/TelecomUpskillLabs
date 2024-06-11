@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class FormPageTest extends Setup {
+    /*
     private FormPage formPage;
     private Homepage homepage;
     @BeforeClass
@@ -30,4 +31,6 @@ public class FormPageTest extends Setup {
         formPage.clickOnSubmit();
 
     }
+
+     */
 }

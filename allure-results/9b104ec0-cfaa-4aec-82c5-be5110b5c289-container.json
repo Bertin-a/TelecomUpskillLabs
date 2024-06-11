@@ -1,0 +1,1 @@
+{"uuid":"9b104ec0-cfaa-4aec-82c5-be5110b5c289","name":"Selenide.TestCases.FormPageTest","children":["621626aa-b6ed-4a61-ac86-82ef968b7c2c"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718102692779,"stop":1718102694985}],"afters":[],"start":1718102674536,"stop":1718102808205}

@@ -1,0 +1,1 @@
+{"uuid":"969ea252-3bfc-438d-97f5-d675d2f95970","name":"Selenide.TestCases.SliderPageTest","children":["2e72f6aa-2725-4866-a330-06ab6a07524b"],"befores":[{"name":"setUpPage","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718100695865,"stop":1718100699223}],"afters":[],"start":1718100652820,"stop":1718100781586}

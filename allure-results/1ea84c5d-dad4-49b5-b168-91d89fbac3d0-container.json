@@ -1,0 +1,1 @@
+{"uuid":"1ea84c5d-dad4-49b5-b168-91d89fbac3d0","name":"Selenide.TestCases.CalenderPageTest","children":["c8b10ca6-3d98-4f75-86af-4660a1ef8f75"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718103207133,"stop":1718103213642}],"afters":[],"start":1718103207106,"stop":1718103328667}

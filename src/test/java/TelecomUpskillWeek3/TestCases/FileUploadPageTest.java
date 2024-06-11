@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class FileUploadPageTest extends Setup {
-    private FileUploadsPage fileUploadsPage;
+  /*  private FileUploadsPage fileUploadsPage;
     private Homepage homepage;
 
     @BeforeClass
@@ -23,4 +23,6 @@ public class FileUploadPageTest extends Setup {
     public void upload() throws InterruptedException {
         fileUploadsPage.upload();
     }
+
+   */
 }

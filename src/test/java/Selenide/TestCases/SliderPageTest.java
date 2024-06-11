@@ -20,7 +20,7 @@ public class SliderPageTest  {
     }
     @Test
     public void slideTo50(){
-        int offset = calculateOffset(50, sliderPage.slider());
+        int offset = calculateOffset(25, sliderPage.slider());
         Actions slide = new Actions(WebDriverRunner.getWebDriver());
         slide.dragAndDropBy(sliderPage.slider(),offset,0).perform();
 

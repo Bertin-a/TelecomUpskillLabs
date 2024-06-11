@@ -1,40 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
     <test verbose="2" preserve-order="true"
-          name="C:/Users/BertinaAyuure/IdeaProjects/demo5Selenium/src/test/java/com/example/demo5selenium">
+          name="C:/Users/BertinaAyuure/IdeaProjects/demo5Selenium/src/test/java/Selenide">
         <classes>
-            <class name="com.example.demo5selenium.HardAsserts">
+            <class name="Selenide.TestCases.CalenderPageTest">
                 <methods>
-                    <include name="doSomething"/>
-                    <include name="printStatement"/>
+                    <include name="pickDate"/>
                 </methods>
             </class>
-            <class name="com.example.demo5selenium.MainPage">
+            <class name="Selenide.TestCases.DownloadPageTest">
                 <methods>
-                    <include name="login"/>
-                    <include name="printSomethings"/>
+                    <include name="download"/>
                 </methods>
             </class>
-            <class name="com.example.demo5selenium.publicClassprivate">
+            <class name="Selenide.TestCases.FileUploadPageTest">
                 <methods>
-                    <include name="testMethod2"/>
+                    <include name="upload"/>
                 </methods>
             </class>
-            <class name="com.example.demo5selenium.publicPrivate">
+            <class name="Selenide.TestCases.FormPageTest">
                 <methods>
-                    <include name="test6"/>
+                    <include name="fillform"/>
                 </methods>
             </class>
-            <class name="com.example.demo5selenium.softAssert">
+            <class name="Selenide.TestCases.HomePageTest">
                 <methods>
-                    <include name="print"/>
-                    <include name="printSomething"/>
+                    <include name="ValidateHomePage"/>
                 </methods>
             </class>
-            <class name="com.example.demo5selenium.testNGAnnotations">
+            <class name="Selenide.TestCases.IframePageTest">
                 <methods>
-                    <include name="test6"/>
+                    <include name="scrollInIframeAndClick"/>
+                </methods>
+            </class>
+            <class name="Selenide.TestCases.ModelsPageTest">
+                <methods>
+                    <include name="interactWithModels"/>
+                </methods>
+            </class>
+            <class name="Selenide.TestCases.PopupPageTest">
+                <methods>
+                    <include name="interactWithPopUps"/>
+                </methods>
+            </class>
+            <class name="Selenide.TestCases.SliderPageTest">
+                <methods>
+                    <include name="slideTo50"/>
+                </methods>
+            </class>
+            <class name="Selenide.TestCases.TablesPageTest">
+                <methods>
+                    <include name="printData"/>
+                </methods>
+            </class>
+            <class name="Selenide.TestCases.WindowsOperationPageTest">
+                <methods>
+                    <include name="operations"/>
+                </methods>
+            </class>
+            <class name="Selenide.test">
+                <methods>
+                    <include name="interactingWithElement"/>
                 </methods>
             </class>
         </classes>

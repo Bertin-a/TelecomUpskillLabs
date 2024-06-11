@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class HomePageTest extends Setup {
-    private Homepage homepage;
+  /*  private Homepage homepage;
 
     @BeforeClass
     public void setUpPage() {
@@ -19,4 +19,6 @@ public class HomePageTest extends Setup {
         boolean is_displayed = homepage.ValidateHomePage();
         Assert.assertTrue(is_displayed, "Page is not visible");
     }
+
+   */
 }

@@ -1,0 +1,1 @@
+{"uuid":"330a9949-c03d-49ad-a31b-6fa5d20ca938","name":"Selenide.TestCases.WindowsOperationPageTest","children":["6d61bdbf-4af5-4e81-9f57-031ddf932df3"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718102733486,"stop":1718102736234}],"afters":[],"start":1718102674537,"stop":1718102808213}

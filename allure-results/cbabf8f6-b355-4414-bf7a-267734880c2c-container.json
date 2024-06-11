@@ -1,0 +1,1 @@
+{"uuid":"cbabf8f6-b355-4414-bf7a-267734880c2c","name":"Selenide.TestCases.FileUploadPageTest","children":["342fb7c7-14fa-4ac9-ac9c-ee53dd497a2e"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1718102689196,"stop":1718102692617}],"afters":[],"start":1718102674536,"stop":1718102808204}

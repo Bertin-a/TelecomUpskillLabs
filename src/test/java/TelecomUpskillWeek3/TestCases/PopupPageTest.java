@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class PopupPageTest extends Setup {
+    /*
     private PopupPage popupPage;
     private Homepage homepage;
     @BeforeClass
@@ -23,4 +24,6 @@ public class PopupPageTest extends Setup {
         Thread.sleep(3000);
         popupPage.clickOnAlert();
     }
+
+     */
     }
